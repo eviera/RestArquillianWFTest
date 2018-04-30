@@ -1,5 +1,6 @@
 import net.eviera.pruebas.rest.Services;
 import net.eviera.pruebas.rest.UserData;
+import net.eviera.pruebas.rest.UserResponse;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.extension.rest.client.ArquillianResteasyResource;
@@ -17,6 +18,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 @RunWith(Arquillian.class)
 public class TestPrueba {
@@ -53,8 +55,9 @@ public class TestPrueba {
                         "Tito",
                         42)));
 
-        String responseEntity = response.readEntity(String.class);
-        assertEquals("Titoxxx", responseEntity);
+        UserResponse responseEntity = response.readEntity(UserResponse.class);
+        assertFalse(responseEntity.getError());
+        assertEquals((Object) 43, (Object) responseEntity.getValue());
     }
 
 }

@@ -200,6 +200,7 @@
 
 
 
+        <!-- Agregadas para las pruebas -->
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
             <artifactId>arquillian-rest-client-api</artifactId>
@@ -217,6 +218,9 @@
             <artifactId>resteasy-jackson-provider</artifactId>
             <version>2.3.2.Final</version>
         </dependency>
+
+
+
 
 
 
