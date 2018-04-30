@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="RestArquillanWFTest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="rest-arquillan-wf-test.war">
+      <element id="artifact" artifact-name="RestArquillanWFTest:war exploded" />
+    </root>
+  </artifact>
+</component>
